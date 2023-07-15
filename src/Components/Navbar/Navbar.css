@@ -1,0 +1,56 @@
+.wrapper{
+    display: flex;
+    padding: 2px 21px;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.left{
+    display: flex;
+    width: 33.33333%;
+   
+}
+input{
+    height: 22px;
+    border: none;
+}
+.lan{
+    padding-right: 20px;
+}
+.center{
+flex: 1;
+    width: 33.33333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.right{
+    display: flex;
+    width: 33.33333%;
+    justify-content: flex-end;
+}
+.MenuItems{
+    margin-left: 25px;
+    cursor: pointer;
+}
+.center h1{
+    color: blue;
+    cursor: pointer;
+}
+.Input{
+    display: flex;
+    width: 200px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+}
