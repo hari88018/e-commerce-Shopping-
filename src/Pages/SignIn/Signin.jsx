@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -48,15 +50,15 @@ cursor: pointer;
 margin-bottom: 10px;
 
 `
-const Link = styled.a`
-  cursor: pointer;
-  margin: 5px 0px;
-  text-decoration: underline;
-  font-size: 12px;
+// const Link = styled.link`
+//   cursor: pointer;
+//   margin: 5px 0px;
+//   text-decoration: underline;
+//   font-size: 12px;
 
 
-`
-
+// `
+const ulStyle = {curser:'pointer',margin:'5px 0px',textdecaration:'underline'}
 const Signin = () => {
   return (
     <Container>
@@ -71,7 +73,7 @@ const Signin = () => {
        
           <Button>Login</Button>
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Link style={ulStyle} to={"/Register"}>CREATE A NEW ACCOUNT</Link>
 
         
 
