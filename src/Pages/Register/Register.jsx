@@ -57,7 +57,7 @@ const Register = () => {
     <Container>
       <Wrapper>
         <Title>Create An Account</Title>
-        <Form>
+        <Form >
           <Input placeholder="Name" />
           <Input placeholder="Last Name" />
           <Input placeholder="User Name" />

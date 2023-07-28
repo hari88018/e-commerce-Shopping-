@@ -59,18 +59,20 @@ const Carousel = () => {
     background-color: #${(props) => props.bg};
   `;
   const ImgContainer = styled.div`
-    flex: 1;
+    width: 400px;
     height: 100%;
-    animation: scroll 40s linear infinite;
+  `;
+
+  const Image = styled.img`
+    height: 100%;
+    
   `;
 
   const InfoContainer = styled.div`
-    flex: 1;
+    /* flex: 1; */
     padding: 50px;
   `;
-  const Image = styled.img`
-    height: 100%;
-  `;
+
   const Title = styled.h1`
     color: #111111;
     font-size: 70px;
@@ -90,19 +92,25 @@ const Carousel = () => {
     border-radius: 9px;
   `;
 
+  const SlideContainer=styled.div`
+    display: flex;
+    flex-direction: column;
+   
+  `
+
   let sliderRef;
 
   return (
     <Container>
       <Arrow>
-        <ArrowLeftIcon
-          style={{ marginRight: "10px", left: 0 }}
-          onClick={goToPrev}
-        />
+        <ArrowLeftIcon style={{ left: 0 }} onClick={goToPrev} />
       </Arrow>
-      <Slider {...settings} ref={(slider) => (sliderRef = slider)}>
-        {sliderItems.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
+
+      
+      <Slider  {...settings} ref={(slider) => (sliderRef = slider)}>
+    
+      {sliderItems.map((item) => (
+            <SlideContainer key={item.id}>
             <ImgContainer>
               <Image src={item.img} alt="" />
             </ImgContainer>
@@ -111,14 +119,17 @@ const Carousel = () => {
               <Disc>{item.desc}</Disc>
               <Button>click here</Button>
             </InfoContainer>
-          </Slide>
-        ))}
+        </SlideContainer>
+          ))}
+       
       </Slider>
-      <div style={{ textAlign: "center", marginTop: "20px" }}></div>
-      <Arrow style={{ marginRight: "10px", right: 0 }} onClick={goToNext}>
+      
+      <Arrow style={{ right: 0 }} onClick={goToNext}>
         <ArrowRightIcon />
       </Arrow>
+      
     </Container>
+    
   );
 };
 
