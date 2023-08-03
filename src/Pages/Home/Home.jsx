@@ -12,7 +12,6 @@ import Carousel from "../../Components/Slider/Carousel";
 const Home = () => {
   return (
     <div>
-      <Announcement />
       <Navbar />
       <Carousel />
       <Categories />
