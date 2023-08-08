@@ -14,7 +14,10 @@ const Navbar = () => {
           <div className="lan">EN</div>
           <div className="Input">
             <input type="text" placeholder="Search..." />
-            <Search />
+            <div className="InputSearch">
+            <Search style={{color:"white"}} />
+
+            </div>
           </div>
         </div>
         <div className="center">
@@ -32,7 +35,7 @@ const Navbar = () => {
             <Link to={"/Cart"}>
             <li>
             <Badge badgeContent={2} color="secondary">
-            <ShoppingCart className="MenuItems" color="action" />
+            <ShoppingCart className="MenuItems"  />
           </Badge>
             </li></Link>
           </ul>

@@ -58,7 +58,7 @@ margin-bottom: 10px;
 
 
 // `
-const ulStyle = {curser:'pointer',margin:'5px 0px',textdecaration:'underline'}
+const ulStyle = {curser:'pointer',margin:'5px 0px',textdecaration:'underline',}
 const Signin = () => {
   return (
     <Container>
